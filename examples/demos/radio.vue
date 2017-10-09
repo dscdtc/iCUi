@@ -1,6 +1,7 @@
 
 <template>
-    <div>
+    <div class="demo-container">
+       <p>Radio 单选框</p>
        <ic-radio name="1" v-model="radio1">单选框1</ic-radio>
        <ic-radio name="2" v-model="radio1">单选框2</ic-radio>
        <ic-radio name="3" v-model="radio1">单选框3</ic-radio>
@@ -18,4 +19,14 @@ export default {
   }
 };
 </script>
+<style>
+.demo-container{
+  padding:20px;
+  p{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+  }
+}
+</style>
   
