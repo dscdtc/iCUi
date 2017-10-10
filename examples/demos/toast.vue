@@ -5,7 +5,7 @@
       </section>
     </template>
     <style>
-.demo-toast {
+/* .demo-toast {
   .ic-button {
         width:100px;
         background: #47c9bc;
@@ -20,7 +20,7 @@
         margin-left:-50px;
         border-radius:6px;
   }
-}
+} */
 </style>
 <script>
 import { Toast } from 'packages';

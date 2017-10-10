@@ -45,7 +45,7 @@ module.exports = {
               },
               {
                 "path": "/button",
-                "title": "Button 单选"
+                "title": "Button 按钮"
               }
             ]
           },

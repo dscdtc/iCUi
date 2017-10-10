@@ -5,8 +5,7 @@
     {
       'disabled': disabled,
       'loading': loading,
-      'inline': inline,
-      'ic-button-active': onclick
+      'inline': inline
     }
   ]"
   @click="clickOn"
@@ -42,10 +41,9 @@
     },
     methods: {
       clickOn () {
-        this.onclick = true
-        setTimeout(()=>(
-          this.onclick = false
-        ), 100)
+        if (!this.loading && !this.disabled) {
+          this.$emit('click')
+        }
       }
     },
     components: {

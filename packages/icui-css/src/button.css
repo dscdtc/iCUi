@@ -15,7 +15,7 @@
   background-color: #47c9bc;
   border: 1px solid #ddd
 }
-.ic-button-active {
+.ic-button:active {
   background-color: #06a999
 }
 
