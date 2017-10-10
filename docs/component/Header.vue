@@ -2,6 +2,7 @@
   <div class="zan-doc-header">
     <div class="zan-doc-header__top">
       <a class="zan-doc-header__logo"></a>
+      <div class="zan-doc-header__title">icui使用文档</div>
       <ul class="zan-doc-header__top-nav">
         <li v-for="(value, key) in nav">
           <a :href="value" :class="{ active: key === active }">{{ key }}</a>
@@ -68,6 +69,11 @@ export default {
     background-repeat: no-repeat;
   }
 
+  &__title {
+    font-size: 20px;
+    color: #313131;
+    margin-left:30px;
+  }
 
   &__bottom {
     height: $zan-doc-header-bottom-height;
