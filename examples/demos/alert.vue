@@ -1,7 +1,7 @@
 
 <template>
   <section class="demo-toast">
-      <button class="ic-button" @click="alert">原生iOS Alert</button>
+      <ic-button @click="alert">原生iOS Alert</ic-button>
   </section>
 </template>
 <style>
