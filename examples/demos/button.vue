@@ -9,14 +9,12 @@
   </section>
 </template>
 <script>
-export default {
-    data (){
-        return {}
-    }
-}
 </script>
 <style>
+  .demo-button {
+    padding: 20px;
+  }
   .demo-button > * {
-    margin: 32px 0;
+    margin: 16px 0;
   }
 </style>

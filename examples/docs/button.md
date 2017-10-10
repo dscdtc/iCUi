@@ -1,4 +1,4 @@
-## Switch 滑动开关
+## Button 按钮
 
 ### 使用指南
 ``` javascript
@@ -8,12 +8,13 @@ Vue.component(Button.name, Button);
 ```
 
 ### 代码演示
-
-#### 
-
 :::demo
 ```html
-<ic-button :value="false" :name="name"></ic-button>
+<ic-button>Primary Button</ic-button>
+<ic-button loading>Loading</ic-button>
+<ic-button disabled>Disabled</ic-button>
+<ic-button inline>Inline Button</ic-button>
+<ic-button inline>Inline Button</ic-button>
 ```
 :::
 
@@ -21,5 +22,6 @@ Vue.component(Button.name, Button);
 
 | 参数       | 说明      | 类型       | 默认值       |
 |-----------|-----------|-----------|-------------|
-| value | 开关状态 | `Boolean` | false|
-| name | switch 的 name | `String` | ''|
+| loading | 加载中的按钮 | `Boolean` | false |
+| disable | 不可用的按钮 | `Boolean` | false |
+| inline | 行内的按钮 | `Boolean` | false |
