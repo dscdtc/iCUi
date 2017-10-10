@@ -5,6 +5,7 @@
     {
       'disabled': disabled,
       'loading': loading,
+      'ripple': !disabled&&!loading&&ripple,
       'inline': inline
     }
   ]"
@@ -37,11 +38,15 @@
       loading: {
         type: Boolean,
         default: false
+      },
+      ripple: {
+        type: Boolean,
+        default: true
       }
     },
     methods: {
       clickOn () {
-        if (!this.loading && !this.disabled) {
+        if (this.loading && this.disabled) {
           this.$emit('click')
         }
       }
