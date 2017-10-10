@@ -1,10 +1,15 @@
 <template>
     <div>
-        <div class="ic-radio">
+        <div class="ic-radio"
+            :class="{
+                'ic-radio-disable' : isDisabled
+            }"
+        >
             <span class="ic-radio-input">
                 <input type="radio" class="ic-radio-control"
                     :value="name"
                     v-model="currentValue"
+                    :disabled="isDisabled"
                 >
                 <span class="ic-icon" :class="{
                     'ic-icon-checked': currentValue === name,
@@ -22,7 +27,14 @@
     export default {
         name: COMPONENT_NAME,
         props :{
-            value: {},
+            isDisabled: {
+                type: Boolean,
+                default: false
+            },
+            value: {
+                type: String,
+                default: ''
+            },
             name: [String, Number]
         },
         computed :{

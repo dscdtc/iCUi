@@ -25,7 +25,7 @@
     transition: all 0.1s;
   }
   .switch-option .switch-ellipse.active{
-    background-color: #4dd865;
+    background-color: #47c9bc;
     border-color: transparent;
     transition: all 0.2s ease 0.2s;
   }
