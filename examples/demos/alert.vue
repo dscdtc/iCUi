@@ -1,10 +1,10 @@
 
-    <template>
-      <section class="demo-toast">
-         <button class="ic-button" @click="alert">原生iOS Alert</button>
-      </section>
-    </template>
-    <style>
+<template>
+  <section class="demo-toast">
+      <ic-button @click="alert">原生iOS Alert</ic-button>
+  </section>
+</template>
+<style>
 </style>
 <script>
 import { Alert ,Toast} from 'packages';

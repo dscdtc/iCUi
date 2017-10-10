@@ -1,10 +1,9 @@
-
-    <template>
-      <section class="demo-toast">
-         <button class="ic-button" @click="confirm">原生iOS Confirm</button>
-      </section>
-    </template>
-    <style>
+<template>
+  <section class="demo-toast">
+      <ic-button @click="confirm">原生iOS Confirm</ic-button>
+  </section>
+</template>
+<style>
 </style>
 <script>
 import { Confirm ,Toast} from 'packages';

@@ -43,6 +43,10 @@ module.exports = {
                 "path": "/qrcode",
                 "title": "QRCode 二维码"
               },
+              {
+                "path": "/button",
+                "title": "Button 按钮"
+              }
             ]
           },
           {
@@ -55,10 +59,6 @@ module.exports = {
               {
                 "path": "/radio",
                 "title": "Radio 单选"
-              },
-              {
-                "path": "/button",
-                "title": "Button 单选"
               }
             ]
           },
