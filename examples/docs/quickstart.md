@@ -18,8 +18,8 @@ import 'icui/lib/icui-css/button.css';
 ```
 #### 或者
 ```js
-    import Button from 'icui/lib/button';
-    import 'icui/lib/icui-css/button.css';
+import Button from 'icui/lib/button';
+import 'icui/lib/icui-css/button.css';
 ```
 
 #### 导入所有组件
