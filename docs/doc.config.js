@@ -55,6 +55,10 @@ module.exports = {
               {
                 "path": "/radio",
                 "title": "Radio 单选"
+              },
+              {
+                "path": "/button",
+                "title": "Button 单选"
               }
             ]
           },

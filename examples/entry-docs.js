@@ -8,4 +8,5 @@ export default {
   'confirm': r => require.ensure([], () => r(require('./docs/confirm.md')), 'confirm.md'),
   'slider': r => require.ensure([], () => r(require('./docs/slider.md')), 'slider.md'),
   'qrcode': r => require.ensure([], () => r(require('./docs/qrcode.md')), 'qrcode.md'),
+  'button': r => require.ensure([], () => r(require('./docs/button.md')), 'button.md'),
 };
