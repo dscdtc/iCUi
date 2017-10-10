@@ -13,7 +13,7 @@ Vue.component(Button.name, Button);
 <ic-button>Primary Button</ic-button>
 <ic-button loading>Loading</ic-button>
 <ic-button disabled>Disabled</ic-button>
-<ic-button inline>Inline Button</ic-button>
+<ic-button inline :ripple="false">Inline Button</ic-button>
 <ic-button inline>Inline Button</ic-button>
 ```
 :::
