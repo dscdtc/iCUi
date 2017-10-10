@@ -6,6 +6,7 @@ import Alert from './alert';
 import Confirm from './confirm';
 import Slider from './slider';
 import Qrcode from './qrcode';
+import Button from './button';
 const version = '0.0.1';
 const components = [
   Loading,
@@ -15,7 +16,8 @@ const components = [
   Alert,
   Confirm,
   Slider,
-  Qrcode
+  Qrcode,
+  Button
 ];
 const install = function(Vue) {
   if (install.installed) return;
@@ -40,7 +42,8 @@ export {
   Alert,
   Confirm,
   Slider,
-  Qrcode
+  Qrcode,
+  Button
 };
 export default {
   install,
