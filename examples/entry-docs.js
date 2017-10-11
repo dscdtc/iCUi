@@ -10,4 +10,5 @@ export default {
   'qrcode': r => require.ensure([], () => r(require('./docs/qrcode.md')), 'qrcode.md'),
   'button': r => require.ensure([], () => r(require('./docs/button.md')), 'button.md'),
   'flexbox': r => require.ensure([], () => r(require('./docs/flexbox.md')), 'flexbox.md'),
+  'picker': r => require.ensure([], () => r(require('./docs/picker.md')), 'picker.md'),
 };

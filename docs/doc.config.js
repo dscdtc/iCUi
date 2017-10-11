@@ -40,6 +40,10 @@ module.exports = {
                 "title": "Slider 轮播"
               },
               {
+                "path": "/picker",
+                "title": "Picker 选择器"
+              },
+              {
                 "path": "/qrcode",
                 "title": "QRCode 二维码"
               },

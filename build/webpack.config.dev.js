@@ -8,6 +8,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 const styleLoaders = [
   { loader: 'css-loader' },
+  { loader: 'stylus-loader' },
   { loader: 'postcss-loader', options: { sourceMap: true } }
 ];
 
@@ -82,7 +83,7 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'stylus-loader']
+        use: ExtractTextPlugin.extract({ use: styleLoaders })
       },
       {
         test: /\.md/,

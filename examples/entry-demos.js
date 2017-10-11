@@ -9,4 +9,5 @@ export default {
   'qrcode': r => require.ensure([], () => r(require('./demos/qrcode.vue')), 'qrcode.vue'),
   'button': r => require.ensure([], () => r(require('./demos/button.vue')), 'button.vue'),
   'flexbox': r => require.ensure([], () => r(require('./demos/flexbox.vue')), 'flexbox.vue'),
+  'picker': r => require.ensure([], () => r(require('./demos/picker.vue')), 'picker.vue'),
 };
