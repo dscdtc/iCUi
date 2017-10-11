@@ -18,6 +18,14 @@
       vertical: {
         type: Boolean,
         default: false
+      },
+      col: {
+        type: String,
+        default: '0'
+      },
+      row: {
+        type: String,
+        default: '0'
       }
     }
   }
