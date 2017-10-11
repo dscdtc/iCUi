@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { addClass } from '../common/js/dom'
+  import { addClass } from './common/js/dom'
   import BScroll from 'better-scroll'
 
   const COMPONENT_NAME = 'ic-slider'

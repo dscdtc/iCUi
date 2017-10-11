@@ -49,6 +49,9 @@
         },
         methods :{
             handleLabelClick() {
+                if(this.isDisabled){
+                    return
+                }
                 this.currentValue = this.name;
             },
         }

@@ -1,24 +1,25 @@
-import Loading from './loading';
-import SwitchOption from './switch-option';
-import Radio from './radio';
-import Toast from './toast';
 import Alert from './alert';
-import Confirm from './confirm';
-import Slider from './slider';
-import Qrcode from './qrcode';
 import Button from './button';
+import Confirm from './confirm';
+import Icon from './icon';
+import Loading from './loading';
+import Qrcode from './qrcode';
+import Radio from './radio';
+import Slider from './slider';
+import SwitchOption from './switch-option';
+import Toast from './toast';
+
 const version = '0.0.1';
 const components = [
+  Button,
+  Icon,
   Loading,
-  SwitchOption,
-  Radio,
-  Toast,
-  Alert,
-  Confirm,
-  Slider,
   Qrcode,
-  Button
+  Radio,
+  Slider,
+  SwitchOption
 ];
+
 const install = function(Vue) {
   if (install.installed) return;
 
@@ -34,16 +35,17 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export {
   install,
-  SwitchOption,
-  Radio,
   version,
-  Loading,
-  Toast,
   Alert,
+  Button,
   Confirm,
-  Slider,
+  Icon,
+  Loading,
   Qrcode,
-  Button
+  Radio,
+  Slider,
+  SwitchOption,
+  Toast
 };
 export default {
   install,
