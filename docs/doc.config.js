@@ -44,6 +44,10 @@ module.exports = {
                 "title": "QRCode 二维码"
               },
               {
+                "path": "/flexbox",
+                "title": "Flexbox 布局"
+              },
+              {
                 "path": "/button",
                 "title": "Button 按钮"
               }

@@ -1,6 +1,8 @@
 import Alert from './alert';
 import Button from './button';
 import Confirm from './confirm';
+import Flexbox from './flexbox';
+import FlexboxItem from './flexbox-item';
 import Icon from './icon';
 import Loading from './loading';
 import Qrcode from './qrcode';
@@ -12,6 +14,8 @@ import Toast from './toast';
 const version = '0.0.1';
 const components = [
   Button,
+  Flexbox,
+  FlexboxItem,
   Icon,
   Loading,
   Qrcode,
@@ -39,6 +43,8 @@ export {
   Alert,
   Button,
   Confirm,
+  Flexbox,
+  FlexboxItem,
   Icon,
   Loading,
   Qrcode,

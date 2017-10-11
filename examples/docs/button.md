@@ -25,3 +25,4 @@ Vue.component(Button.name, Button);
 | loading | 加载中的按钮 | `Boolean` | false |
 | disable | 不可用的按钮 | `Boolean` | false |
 | inline | 行内的按钮 | `Boolean` | false |
+| ripple | 显示波纹效果 | `Boolean` | true |

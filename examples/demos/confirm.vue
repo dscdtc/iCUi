@@ -1,12 +1,13 @@
 <template>
   <section class="demo-toast">
+    <ic-flexbox>
       <ic-button @click="confirm">原生iOS Confirm</ic-button>
+    </ic-flexbox>
   </section>
 </template>
-<style>
-</style>
+
 <script>
-import { Confirm ,Toast} from 'packages';
+import { Confirm, Toast } from 'packages';
 
 export default {
   methods: {

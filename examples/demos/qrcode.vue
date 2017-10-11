@@ -1,17 +1,17 @@
 <template>
-  <div class="qrContainer">
-    <p>二维码</p>
-    <ic-qrcode val="https://www.baidu.com/" :size="160"></ic-qrcode>
-  </div>
+  <section class="demo">
+    <ic-flexbox vertical>
+      <h1 class="title">二维码</h1>
+      <ic-flexbox-item>
+        <ic-qrcode val="https://www.baidu.com/" :size="160"></ic-qrcode>
+      </ic-flexbox-item>
+    </ic-flexbox>
+  </section>
 </template>
 <style>
-  .qrContainer{
-      text-align:center;
-      margin-top:20px;
-  }
-  .qrContainer p{
-      margin-bottom:20px;
-      font-size:20px;
+  .title {
+    font-size: 20px;
+    font-weight: blod;
   }
 </style>
     

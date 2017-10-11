@@ -5,7 +5,7 @@
     {
       'disabled': disabled,
       'loading': loading,
-      'ripple': !disabled&&!loading&&ripple,
+      'ripple': !disabled && !loading && ripple,
       'inline': inline
     }
   ]"
@@ -21,11 +21,6 @@
   const COMPONENT_NAME = 'ic-button'
   export default {
     name: COMPONENT_NAME,
-    data() {
-      return {
-        onclick: false
-      }
-    },
     props: {
       disabled: {
         type: Boolean,
@@ -46,7 +41,7 @@
     },
     methods: {
       clickOn () {
-        if (this.loading && this.disabled) {
+        if (!this.loading && !this.disabled) {
           this.$emit('click')
         }
       }
