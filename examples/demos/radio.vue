@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class="demo-container">
       <h1 class="title">Radio 单选框</h1>
       <span>基础用法</span>
       <ic-radio name="1" v-model="radio1">单选框1</ic-radio>
@@ -25,6 +25,9 @@ export default {
 };
 </script>
 <style>
+  .demo-container{
+    padding:10px;
+  }
   .title {
     font-size: 20px;
     font-weight: blod;
