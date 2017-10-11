@@ -5,6 +5,7 @@ import Flexbox from './flexbox';
 import FlexboxItem from './flexbox-item';
 import Icon from './icon';
 import Loading from './loading';
+import Navbar from './navbar';
 import Picker from './picker';
 import Qrcode from './qrcode';
 import Radio from './radio';
@@ -19,6 +20,7 @@ const components = [
   FlexboxItem,
   Icon,
   Loading,
+  Navbar,
   Picker,
   Qrcode,
   Radio,
@@ -49,6 +51,7 @@ export {
   FlexboxItem,
   Icon,
   Loading,
+  Navbar,
   Picker,
   Qrcode,
   Radio,

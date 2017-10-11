@@ -32,6 +32,18 @@ module.exports = {
             "groupName": "基础组件",
             "list": [
               {
+                "path": "/flexbox",
+                "title": "Flexbox 布局"
+              },
+              {
+                "path": "/button",
+                "title": "Button 按钮"
+              },
+              {
+                "path": "/navbar",
+                "title": "NavBar 导航栏"
+              },
+              {
                 "path": "/loading",
                 "title": "Loading 加载"
               },
@@ -46,14 +58,6 @@ module.exports = {
               {
                 "path": "/qrcode",
                 "title": "QRCode 二维码"
-              },
-              {
-                "path": "/flexbox",
-                "title": "Flexbox 布局"
-              },
-              {
-                "path": "/button",
-                "title": "Button 按钮"
               }
             ]
           },
