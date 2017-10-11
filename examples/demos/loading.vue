@@ -1,23 +1,27 @@
 <template>
   <section class="demo-loading">
-    <h1 class="text">iOS Loading</h1>
-    <h2 class="text">20px</h2>
-    <ic-loading :size="20"></ic-loading>
-    <h2 class="text">40px</h2>
-    <ic-loading :size="40"></ic-loading>
-    <h2 class="text">60px</h2>
-    <ic-loading :size="60"></ic-loading>
+    <ic-flexbox vertical>
+      <ic-flexbox-item>
+        <h1 class="title">iOS Loading</h1>
+      </ic-flexbox-item>
+      <ic-flexbox-item>
+        <h2 class="text">20px</h2>
+        <ic-loading :size="20"></ic-loading>
+      </ic-flexbox-item>
+      <ic-flexbox-item>
+        <h2 class="text">40px</h2>
+        <ic-loading :size="40"></ic-loading>
+      </ic-flexbox-item>
+      <ic-flexbox-item>
+        <h2 class="text">60px</h2>
+        <ic-loading :size="60"></ic-loading>
+      </ic-flexbox-item>
+    </ic-flexbox>
   </section>
 </template>
-<style>
-  .demo-loading {
-    margin-top:20px;
-    .text{
-      text-align:center;
-      font-size:20px;
-      margin-bottom:20px
-    }
+<<style>
+  .title {
+    font-size: 20px;
+    font-weight: blod;
   }
 </style>
-    
-  

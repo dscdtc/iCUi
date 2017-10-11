@@ -1,9 +1,15 @@
 <template>
-  <div class="demo-container">
-    <p>switch 滑动开关</p>
-    <ic-switch :name="On" :value="true"></ic-switch>
-    <ic-switch :name="Off" :value="false"></ic-switch>
-  </div>
+  <section class="demo">
+    <ic-flexbox vertical>
+      <h1 class="title">switch 滑动开关</h1>
+      <ic-flexbox-item>
+        <ic-switch :name="On" :value="true"></ic-switch>
+      </ic-flexbox-item>
+      <ic-flexbox-item>
+        <ic-switch :name="Off" :value="false"></ic-switch>
+      </ic-flexbox-item>
+    </ic-flexbox>
+  </section>
 </template>
 <script>
 export default {
@@ -16,14 +22,10 @@ export default {
 }
 </script>
 <style>
-.demo-container{
-  padding:20px;
-  p{
-    text-align:center;
-    font-size:20px;
-    margin-bottom:20px;
+  .title {
+    font-size: 20px;
+    font-weight: blod;
   }
-}
 </style>
     
   

@@ -1,0 +1,21 @@
+.ic-flexbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+.ic-flexbox-item {
+  width: 100%;
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  padding: 4px
+}
+
+.vertical {
+  flex-direction: column;
+}

@@ -1,13 +1,10 @@
 <template>
   <section class="demo-toast">
+    <ic-flexbox>
       <ic-button @click="showToast">Toast 轻提示</ic-button>
+    </ic-flexbox>
   </section>
 </template>
-<style>
-  .demo-toast {
-    padding: 20px;
-  }
-</style>
 <script>
 import { Toast } from 'packages';
 
