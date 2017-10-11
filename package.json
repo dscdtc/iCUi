@@ -10,6 +10,7 @@
     "build:icui-css": "gulp build --gulpfile packages/icui-css/gulpfile.js --color && mkdir lib/icui-css && cp -R packages/icui-css/lib/ lib/icui-css && cp -R packages/icui-css/src/font lib/icui-css",
     "build:icui": "cross-env NODE_ENV=production webpack --progress --hide-modules --color --config build/webpack.build.js && cross-env NODE_ENV=production webpack -p --progress --hide-modules --color --config build/webpack.build.js",
     "build:style-entry": "node build/bin/build-style-entry.js",
+    "dist": "node build/bin/build-lib.js",
     "deploy": "rimraf docs/dist && cross-env NODE_ENV=production webpack --progress --hide-modules --config  build/webpack.config.prod.js"
   },
   "repository": {

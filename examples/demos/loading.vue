@@ -19,7 +19,7 @@
     </ic-flexbox>
   </section>
 </template>
-<<style>
+<style>
   .title {
     font-size: 20px;
     font-weight: blod;
