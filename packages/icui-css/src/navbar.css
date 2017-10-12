@@ -1,0 +1,39 @@
+.ic-nav-light {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color:#000;
+    .ic-nav-left {
+        display: flex;
+        padding-left:15px;
+        align-items: center;
+        flex:1;
+        height:100%;
+        font-size:14px;
+        color: #47c9bc;
+        .ic-icon-back {
+            font-size:14px;
+            margin-right:10px;
+        }
+    }
+    .ic-nav-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+        height: 100%;
+        font-size:16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .ic-nav-right {
+        display: flex;
+        padding-right:15px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+    }
+}

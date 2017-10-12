@@ -45,6 +45,8 @@
 
 
   .ic-icon-check:before { content: '\e620'; } 
-  .ic-icon-checked:before { content: '\e6ee'; } 
+  .ic-icon-checked:before { content: '\e6ee'; }
+  .ic-icon-back:before { content: '\e600'; }
+
   
   
