@@ -16,11 +16,6 @@
   border: 1px solid #ddd
 }
 
-.ic-button:active {
-  opacity: .9;
-  background-color: #06a999
-}
-
 .ripple {
   position: relative;
   /* 隐藏溢出的径向渐变背景 */
@@ -43,6 +38,11 @@
   transform: scale(10, 10);
   opacity: 0;
   transition: transform .3s, opacity .5s;
+}
+
+.ripple:active {
+  opacity: .9;
+  background-color: #06a999
 }
 
 .ripple:active:after {

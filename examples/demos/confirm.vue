@@ -1,7 +1,9 @@
 <template>
   <section class="demo-toast">
-    <ic-flexbox>
-      <ic-button @click="confirm">原生iOS Confirm</ic-button>
+    <ic-flexbox vertical row="250">
+      <ic-flexbox-item>
+        <ic-button @click="confirm">原生iOS Confirm</ic-button>
+      </ic-flexbox-item>
     </ic-flexbox>
   </section>
 </template>

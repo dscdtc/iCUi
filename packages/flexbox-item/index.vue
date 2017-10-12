@@ -29,10 +29,9 @@
         const row = Number(this.$parent.row)
         const col = Number(this.$parent.col)
         let left = Number(this.offset) + col/2
-        return this.span || this.offset || row || col
+        return this.span || left || row || col
         ? {
           flex: this.span,
-          marginLeft: `${this.offset}px`,
           margin: `${row/2}px ${col}px ${row/2}px ${left}px`
         }
         : {}
