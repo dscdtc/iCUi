@@ -1,7 +1,7 @@
 
 <template>
   <section class="demo">
-    <ic-flexbox row="250" col="250">
+    <ic-flexbox row="250">
       <ic-flexbox-item>
         <ic-button @click="alert">原生iOS Alert</ic-button>
       </ic-flexbox-item>
