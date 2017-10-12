@@ -6,8 +6,10 @@
 			</ic-flexbox-item>
 		</ic-flexbox>
 		<ic-navbar
-		title="NavBar"
-		leftContent="返回"
+            title="NavBar"
+            leftContent="返回"
+            leftIcon
+            rightIcon
 		></ic-navbar>
 	</div>
 </template>

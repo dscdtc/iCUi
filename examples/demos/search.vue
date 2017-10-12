@@ -6,13 +6,29 @@
 			</ic-flexbox-item>
 		</ic-flexbox>
 		<ic-search
+			class="search"
 		  placeholder="请输入书名或作者名"
+			@search="searching"
 		></ic-search>
 	</div>
 </template>
 
+<<script>
+export default {
+	methods: {
+		searching (searchValue) {
+			alert('你搜索的内容为：' + searchValue)
+		}
+	}
+}
+</script>
+
+
 <style>
   .title {
     font-size: 20px;
-  }
+	}
+	.search {
+		background-color: red;
+	}
 </style>

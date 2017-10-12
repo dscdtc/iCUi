@@ -1,10 +1,10 @@
 <template>
-  <i :class="['van-icon', 'van-icon-' + name]" @click="$emit('click', $event)" />
+  <i :class="['ic-icon', 'ic-icon-' + name]" @click="$emit('click', $event)" />
 </template>
 
 <script>
 export default {
-  name: 'van-icon',
+  name: 'ic-icon',
 
   props: {
     name: {
