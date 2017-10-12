@@ -9,6 +9,7 @@ import Navbar from './navbar';
 import Picker from './picker';
 import Qrcode from './qrcode';
 import Radio from './radio';
+import Search from './search';
 import Slider from './slider';
 import SwitchOption from './switch-option';
 import Toast from './toast';
@@ -24,6 +25,7 @@ const components = [
   Picker,
   Qrcode,
   Radio,
+  Search,
   Slider,
   SwitchOption
 ];
@@ -55,6 +57,7 @@ export {
   Picker,
   Qrcode,
   Radio,
+  Search,
   Slider,
   SwitchOption,
   Toast

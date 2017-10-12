@@ -44,6 +44,10 @@ module.exports = {
                 "title": "NavBar 导航栏"
               },
               {
+                "path": "/search",
+                "title": "SearchBar 搜索栏"
+              },
+              {
                 "path": "/loading",
                 "title": "Loading 加载"
               },

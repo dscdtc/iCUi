@@ -1,4 +1,4 @@
-## Navbar 导航栏
+## SearchBar 搜索栏
 
 ### 使用指南
 ``` javascript
