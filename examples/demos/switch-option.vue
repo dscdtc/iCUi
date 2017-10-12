@@ -1,6 +1,6 @@
 <template>
   <section class="demo">
-    <ic-flexbox vertical row="32">
+    <ic-flexbox vertical row="16">
       <h1 class="title">switch 滑动开关</h1>
       <ic-flexbox-item>
         <ic-switch :name="On" :value="true"></ic-switch>

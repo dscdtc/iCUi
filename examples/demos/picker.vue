@@ -1,8 +1,8 @@
 <template>
     <div slot="content">
-       <ic-flexbox>
+       <ic-flexbox row="16" col="16">
         <ic-flexbox-item>
-          Picker 选择器
+          <h1 class="title">Picker 选择器</h1>
         </ic-flexbox-item>
       </ic-flexbox>
       <ic-button @click="showPicker(0)" ref="select0">{{ selectedText[0] }}</ic-button>
@@ -120,11 +120,12 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-    .select
-      margin: 0 10px 40px 10px
-      height: 40px
-      line-height: 40px
-      text-align: center
-      background: #fff
-
+  .title
+    font-size: 20px
+  .select
+    margin: 0 10px 40px 10px
+    height: 40px
+    line-height: 40px
+    text-align: center
+    background: #fff
 </style>
