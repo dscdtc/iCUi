@@ -1,6 +1,7 @@
 <template>
   <div
   class="ic-flexbox-item"
+  :class="{'vertical': vertical}"
   :style="style"
   >
     <slot></slot>
@@ -15,6 +16,10 @@
       return {}
     },
     props: {
+      vertical: {
+        type: Boolean,
+        default: false
+      },
       span: {
         type: String,
         default: '1'

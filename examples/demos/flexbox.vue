@@ -13,7 +13,11 @@
     <ic-flexbox vertical row=10 col=6>
       <ic-flexbox-item class="flex-item">Item</ic-flexbox-item>
       <ic-flexbox-item class="flex-item">Item</ic-flexbox-item>
-      <ic-flexbox-item class="flex-item">Item</ic-flexbox-item>
+      <ic-flexbox-item class="flex-item-vertical" vertical>
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+      </ic-flexbox-item>
     </ic-flexbox>
   </section>
 </template>
@@ -22,6 +26,10 @@
   .flex-item {
     height: 30px;
     line-height: 30px;
+    background-color: #ccc;
+    border: solid red 1px
+  }
+  .flex-item-vertical {
     background-color: #ccc;
     border: solid red 1px
   }
