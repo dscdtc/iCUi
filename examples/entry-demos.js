@@ -11,4 +11,5 @@ export default {
   'flexbox': r => require.ensure([], () => r(require('./demos/flexbox.vue')), 'flexbox.vue'),
   'picker': r => require.ensure([], () => r(require('./demos/picker.vue')), 'picker.vue'),
   'navbar': r => require.ensure([], () => r(require('./demos/navbar.vue')), 'navbar.vue'),
+  'icon': r => require.ensure([], () => r(require('./demos/icon.vue')), 'icon.vue'),
 };

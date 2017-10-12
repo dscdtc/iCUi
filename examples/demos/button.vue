@@ -24,7 +24,7 @@
   </section>
 </template>
 
-<<style>
+<style>
   .title {
     font-size: 20px;
   }

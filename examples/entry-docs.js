@@ -12,4 +12,5 @@ export default {
   'flexbox': r => require.ensure([], () => r(require('./docs/flexbox.md')), 'flexbox.md'),
   'picker': r => require.ensure([], () => r(require('./docs/picker.md')), 'picker.md'),
   'navbar': r => require.ensure([], () => r(require('./docs/navbar.md')), 'navbar.md'),
+  'icon': r => require.ensure([], () => r(require('./docs/icon.md')), 'icon.md'),
 };
