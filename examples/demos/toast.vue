@@ -1,6 +1,6 @@
 <template>
   <section class="demo-toast">
-    <ic-flexbox vertical row="250">
+    <ic-flexbox row="250">
       <ic-flexbox-item>
         <ic-button @click="showToast">Toast 轻提示</ic-button>
       </ic-flexbox-item>

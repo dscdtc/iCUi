@@ -40,7 +40,6 @@
 .title{
     text-align:center;
     margin:16px;
-    font-size:20px;
 }
 .slide-wrapper{
     position: relative;

@@ -5,8 +5,6 @@
   flex-wrap: wrap;
 }
 .ic-flexbox-item {
-  height: 30px;
-  line-height: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
