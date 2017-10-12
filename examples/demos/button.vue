@@ -1,7 +1,9 @@
 <template>
   <section class="demo">
-    <ic-flexbox vertical>
-      <h1>按钮类型</h1>
+    <ic-flexbox vertical row="32" col="16">
+      <ic-flexbox-item>
+        <h1>按钮类型</h1>
+      </ic-flexbox-item>
       <ic-flexbox-item>
         <ic-button>Primary Button</ic-button>
       </ic-flexbox-item>
@@ -13,7 +15,7 @@
       </ic-flexbox-item>
     </ic-flexbox>
 
-    <ic-flexbox>
+    <ic-flexbox row="32" col="16">
       <ic-flexbox-item>
         <ic-button inline :ripple="false">no ripple</ic-button>
         <ic-button inline>Inline Button</ic-button>
@@ -21,9 +23,3 @@
     </ic-flexbox>
   </section>
 </template>
-
-<style>
-  .demo-button > * {
-    margin: 16px 0;
-  }
-</style>

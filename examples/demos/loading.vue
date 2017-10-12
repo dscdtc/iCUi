@@ -1,6 +1,6 @@
 <template>
   <section class="demo-loading">
-    <ic-flexbox vertical>
+    <ic-flexbox vertical row="64">
       <ic-flexbox-item>
         <h1 class="title">iOS Loading</h1>
       </ic-flexbox-item>

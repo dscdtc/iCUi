@@ -11,23 +11,42 @@ Vue.component(FlexboxItem.name, FlexboxItem);
 ### 代码演示
 :::demo
 ```html
-<ic-flexbox class="flexbox">
-  <div class="other-el">其他元素</div>
-  <ic-flexbox-item class="flex-item">12345</ic-flexbox-item>
-  <ic-flexbox-item class="flex-item">上山打老虎</ic-flexbox-item>
-  <ic-flexbox-item class="flex-item">老虎没打到 打到小松鼠</ic-flexbox-item>
+`span` 控制元素宽度占比 比如1:2:3：
+<ic-flexbox>
+  <ic-flexbox-item span="1">Item</ic-flexbox-item>
+  <ic-flexbox-item span="2">Item</ic-flexbox-item>
+  <ic-flexbox-item span="3">Item </ic-flexbox-item>
 </ic-flexbox>
-<ic-flexbox vertical>
-  <ic-flexbox-item class="flex-item">12345</ic-flexbox-item>
-  <ic-flexbox-item class="flex-item">上山打老虎</ic-flexbox-item>
-  <ic-flexbox-item class="flex-item">老虎没打到</ic-flexbox-item>
-  <ic-flexbox-item class="flex-item">打到小松鼠</ic-flexbox-item>
+
+`row` `col`设置子元素之间行间距列间距(单位：px)
+`offset`设置元素左侧偏移量(单位：px)
+<ic-flexbox row="20" col="10">
+  <ic-flexbox-item span="1" offset="32">Item</ic-flexbox-item>
+  <ic-flexbox-item span="2">Item</ic-flexbox-item>
+  <ic-flexbox-item span="1">Item </ic-flexbox-item>
+</ic-flexbox>
+
+`vertical`设置为垂直布局
+<ic-flexbox vertical row="10" col="6">
+  <ic-flexbox-item>Item</ic-flexbox-item>
+  <ic-flexbox-item>Item</ic-flexbox-item>
+  <ic-flexbox-item>Item</ic-flexbox-item>
 </ic-flexbox>
 ```
 :::
 
 ### Options
 
+#### `<ic-flexbox>`
 | 参数       | 说明      | 类型       | 默认值       |
 |-----------|-----------|-----------|-------------|
 | vertical | 垂直布局 | `Boolean` | false |
+| row | 行间距(单位：px) | `String` | '0' |
+| col | 列间距(单位：px) | `String` | '0' |
+
+#### `<ic-flexbox-item>`
+| 参数       | 说明      | 类型       | 默认值       |
+|-----------|-----------|-----------|-------------|
+| vertical | 垂直布局 | `Boolean` | false |
+| span | 宽度比例 | `String` | '' |
+| offset | 偏移量(单位：px) | `String` | '0' |
