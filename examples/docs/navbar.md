@@ -16,8 +16,9 @@ Vue.component(NavBar.name, NavBar);
 <ic-navbar
     title="NavBar"
     leftContent="返回"
-    >
-</ic-navbar>
+    leftIcon
+    rightIcon
+></ic-navbar>
 ```
 :::
 
@@ -27,4 +28,5 @@ Vue.component(NavBar.name, NavBar);
 |-----------|-----------|-----------|-------------|
 | title | 标题 | `String` | false|
 | leftContent | 返回 | `String` | false|
+| leftIcon | 返回按钮 | `Bolearn` | true|
 

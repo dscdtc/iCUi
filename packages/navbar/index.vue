@@ -2,7 +2,7 @@
     <div class="ic-nav-light">
         <div class="ic-nav-left" @click="$emit('clickLeft')">
             <slot name="leftContent">
-                 <span v-if="leftIcon" class="ic-icon ic-icon-back"></span>
+                 <ic-icon name="back" v-if="leftIcon"></ic-icon>
                  <span v-if="leftContent" v-text="leftContent"></span>
             </slot>
         </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="ic-nav-right">
             <slot name="rightContent">
-                <span v-if="rightIcon" class="ic-icon ic-icon-ellipsis"></span>
+                <ic-icon name="ellipsis" v-if="rightIcon"></ic-icon>
             </slot>
         </div>
     </div>
