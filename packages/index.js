@@ -7,11 +7,13 @@ import Icon from './icon';
 import Loading from './loading';
 import Navbar from './navbar';
 import Picker from './picker';
+import Popup from './popup';
 import Qrcode from './qrcode';
 import Radio from './radio';
 import Search from './search';
 import Slider from './slider';
 import SwitchOption from './switch-option';
+import Textarea from './textarea';
 import Toast from './toast';
 
 const version = '0.0.1';
@@ -23,11 +25,13 @@ const components = [
   Loading,
   Navbar,
   Picker,
+  Popup,
   Qrcode,
   Radio,
   Search,
   Slider,
-  SwitchOption
+  SwitchOption,
+  Textarea
 ];
 
 const install = function(Vue) {
@@ -55,11 +59,13 @@ export {
   Loading,
   Navbar,
   Picker,
+  Popup,
   Qrcode,
   Radio,
   Search,
   Slider,
   SwitchOption,
+  Textarea,
   Toast
 };
 export default {

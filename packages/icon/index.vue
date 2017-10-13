@@ -3,9 +3,9 @@
 </template>
 
 <script>
+const COMPONENT_NAME = 'ic-icon'
 export default {
-  name: 'ic-icon',
-
+  name:COMPONENT_NAME,
   props: {
     name: {
       type: String,
