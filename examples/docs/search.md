@@ -2,9 +2,9 @@
 
 ### 使用指南
 ``` javascript
-import { NavBar } from 'icui';
+import { Search } from 'icui';
 
-Vue.component(NavBar.name, NavBar);
+Vue.component(Search.name, Search);
 ```
 
 ### 代码演示
@@ -13,11 +13,28 @@ Vue.component(NavBar.name, NavBar);
 
 :::demo
 ```html
-<ic-navbar
-    title="NavBar"
-    leftContent="返回"
-    >
-</ic-navbar>
+DEMO1:
+<ic-search
+    @search="searching"
+></ic-search>
+
+DEMO2:
+<ic-search
+    class="search"
+    mark="点击查询对象"
+    placeholder="老子要找！对！象！"
+    @search="searching"
+></ic-search>
+
+<script>
+export default {
+	methods: {
+		searching (searchValue) {
+			alert('你搜索的内容为：' + searchValue)
+		}
+	}
+}
+</script>
 ```
 :::
 
@@ -25,6 +42,6 @@ Vue.component(NavBar.name, NavBar);
 
 | 参数       | 说明      | 类型       | 默认值       |
 |-----------|-----------|-----------|-------------|
-| title | 标题 | `String` | false|
-| leftContent | 返回 | `String` | false|
+| mark | 提示语 | `String` | ‘点击搜索’ |
+| placeholder | 返回 | `String` | ‘搜索’ |
 

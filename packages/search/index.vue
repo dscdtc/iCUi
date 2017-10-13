@@ -1,22 +1,26 @@
 <template>
-  <transition name="search-slide">
-    <form class="ic-search">
-      <span class="search-container">
-        <i @click="back" class="search-icon ic-icon-back">返</i>
-        <input
+    <form class="ic-search" action="#">
+      <div :class="{'search-unactive': !isFocus, 'search-active': isFocus}" @click="isFocus = true">
+        <ic-icon name="search" class="search-icon"></ic-icon>
+        <span v-show="!isFocus">{{mark}}</span>
+      </div>
+      <input
+        v-show="isFocus"
         class="search-input"
         v-model="searchValue"
         :placeholder="this.placeholder"
         :autofocus="autofocus"
-        required
         @focus="isFocus = true"
-        />
-        <i @click="clear" class="search-icon-clear">清</i>
-      </span>
-      <i v-show="searchValue" @click="search" class="search-icon icon-search">搜</i>
-      <span v-if="isFocus || autofocus" v-show="!searchValue" @click="isFocus = false" class="search-cancel">取消</span>
+        required
+      />
+      <ic-icon name="del" class="search-icon search-icon-clear" @click="clear"></ic-icon>
+      <transition name="search-slide">
+        <span class="search-search" v-show="searchValue" @click="search">查询</span>
+      </transition>
+      <transition name="search-slide">
+        <span v-if="isFocus" v-show="!searchValue" @click="isFocus = false" class="search-cancel">取消</span>
+      </transition>
     </form>
-  </transition>
 </template>
 
 <script>
@@ -34,15 +38,16 @@
         type: String,
         default:'搜索'
       },
-      autofocus: {
-        type: Boolean,
-        default: false
+      placeholder: {
+        type: String,
+        default:'搜索'
+      },
+      mark: {
+        type: String,
+        default: '点击搜索'
       },
     },
     methods: {
-      back () {
-        this.$router.back()
-      },
       search () {
         if (this.searchValue) {
           this.$emit('search', this.searchValue)
@@ -50,7 +55,6 @@
       },
       clear () {
         this.searchValue = ''
-        this.isFocus = false
       }
     }
   }

@@ -1,37 +1,54 @@
-.search-fade-enter-active, .search-fade-leave-active {
-  transition: all 3s linear /*cubic-bezier(1.0, 0.5, 0.8, 1.0);*/
+.search-slide-enter-active, .search-slide-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.search-fade-enter, .search-fade-leave-to {
-  transform: scaleX(60px);
-  opacity: 0;
+.search-slide-enter, .search-slide-leave-to {
+  transform: translateX(40px);
 }
 
 .ic-search {
-  z-index: 1;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 30px;
   background: #47c9bc;
   color: white;
 }
 
-.ic-search .search-icon {
-  padding: 0 20px;
-  font-weight: 600;
-  font-size: 16px;
-  border: 1px solid rgba(0, 0, 0, .1);
+.ic-search .search-unactive {
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: bold;
 }
-.ic-search .search-cancel {
-  padding: 0 20px;
-  font-weight: 600;
-  font-size: 16px;
-  border: 1px solid rgba(0, 0, 0, .1);
+.ic-search .search-active {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: bold;
 }
-.ic-search .search-input {
+
+.ic-search .search-icon{
+  padding: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ic-search .search-cancel, .ic-search .search-search  {
+  width: 48px;
   z-index: 2;
+  padding: 3px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ic-search .search-input {
   height: 100%;
+  width: 100%;
   flex-grow: 1;
   background-color: transparent;
   color: #fff;
@@ -67,7 +84,8 @@
 
 .ic-search .search-icon-clear {
   display: none;
-  padding: 10px;
-  font-size: 18px;
-  color: rgba(255, 255, 255, .4);
+  padding: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .8);
 }

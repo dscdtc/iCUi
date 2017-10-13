@@ -5,15 +5,28 @@
 				<h1 class="title">搜索栏</h1>
 			</ic-flexbox-item>
 		</ic-flexbox>
-		<ic-search
-			class="search"
-		  placeholder="请输入书名或作者名"
-			@search="searching"
-		></ic-search>
+		<ic-flexbox row=32 vertical>
+			<ic-flexbox-item>
+				<h2>demo1</h2>
+			</ic-flexbox-item>
+			<ic-search
+				@search="searching"
+			></ic-search>
+			<ic-flexbox-item>
+				<h2>demo2</h2>
+			</ic-flexbox-item>
+			<ic-search
+				class="search"
+				mark="点击查询对象"
+				placeholder="老子要找！对！象！"
+				@search="searching"
+			></ic-search>
+		
+		</ic-flexbox>
 	</div>
 </template>
 
-<<script>
+<script>
 export default {
 	methods: {
 		searching (searchValue) {
@@ -29,6 +42,7 @@ export default {
     font-size: 20px;
 	}
 	.search {
-		background-color: red;
+		background-color: #666;
+		color: black
 	}
 </style>

@@ -6,7 +6,7 @@
     url('./font/iconfont.ttf?t=1507775231578') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
     url('./font/iconfont.svg?t=1507775231578#iconfont') format('svg'); /* iOS 4.1- */
   }
-  
+
   .ic-icon {
       display: inline-block;
   }
@@ -48,7 +48,7 @@
   .ic-icon-checked:before { content: '\e6ee'; }
   .ic-icon-back:before { content: '\e600'; }
   .ic-icon-ellipsis:before { content: '\e643'; }
-  .ic-icon-serach:before { content: '\e614'; }
+  .ic-icon-search:before { content: '\e614'; }
   .ic-icon-del:before { content: '\e627'; }
 
   
