@@ -12,4 +12,5 @@ export default {
   'picker': r => require.ensure([], () => r(require('./demos/picker.vue')), 'picker.vue'),
   'navbar': r => require.ensure([], () => r(require('./demos/navbar.vue')), 'navbar.vue'),
   'icon': r => require.ensure([], () => r(require('./demos/icon.vue')), 'icon.vue'),
+  'popup': r => require.ensure([], () => r(require('./demos/popup.vue')), 'popup.vue'),
 };

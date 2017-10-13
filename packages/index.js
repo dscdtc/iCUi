@@ -7,6 +7,7 @@ import Icon from './icon';
 import Loading from './loading';
 import Navbar from './navbar';
 import Picker from './picker';
+import Popup from './popup';
 import Qrcode from './qrcode';
 import Radio from './radio';
 import Slider from './slider';
@@ -22,6 +23,7 @@ const components = [
   Loading,
   Navbar,
   Picker,
+  Popup,
   Qrcode,
   Radio,
   Slider,
@@ -53,6 +55,7 @@ export {
   Loading,
   Navbar,
   Picker,
+  Popup,
   Qrcode,
   Radio,
   Slider,

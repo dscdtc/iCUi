@@ -56,6 +56,10 @@ module.exports = {
                 "title": "Slider 轮播"
               },
               {
+                "path": "/popup",
+                "title": "Popup 弹出层"
+              },
+              {
                 "path": "/picker",
                 "title": "Picker 选择器"
               },
