@@ -10,6 +10,7 @@ import Picker from './picker';
 import Popup from './popup';
 import Qrcode from './qrcode';
 import Radio from './radio';
+import Search from './search';
 import Slider from './slider';
 import SwitchOption from './switch-option';
 import Textarea from './textarea';
@@ -27,6 +28,7 @@ const components = [
   Popup,
   Qrcode,
   Radio,
+  Search,
   Slider,
   SwitchOption,
   Textarea
@@ -60,6 +62,7 @@ export {
   Popup,
   Qrcode,
   Radio,
+  Search,
   Slider,
   SwitchOption,
   Textarea,

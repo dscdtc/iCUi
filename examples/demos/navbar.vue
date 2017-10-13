@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<ic-flexbox>
+		<ic-flexbox row=16>
 			<ic-flexbox-item>
 				<h1 class="title">导航栏</h1>
 			</ic-flexbox-item>

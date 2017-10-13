@@ -1,4 +1,4 @@
-## Switch 滑动开关
+## Navbar 导航栏
 
 ### 使用指南
 ``` javascript

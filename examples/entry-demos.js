@@ -11,6 +11,7 @@ export default {
   'flexbox': r => require.ensure([], () => r(require('./demos/flexbox.vue')), 'flexbox.vue'),
   'picker': r => require.ensure([], () => r(require('./demos/picker.vue')), 'picker.vue'),
   'navbar': r => require.ensure([], () => r(require('./demos/navbar.vue')), 'navbar.vue'),
+  'search': r => require.ensure([], () => r(require('./demos/search.vue')), 'search.vue'),
   'icon': r => require.ensure([], () => r(require('./demos/icon.vue')), 'icon.vue'),
   'popup': r => require.ensure([], () => r(require('./demos/popup.vue')), 'popup.vue'),
   'textarea': r => require.ensure([], () => r(require('./demos/textarea.vue')), 'textarea.vue'),

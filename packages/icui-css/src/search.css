@@ -1,0 +1,91 @@
+.search-slide-enter-active, .search-slide-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.search-slide-enter, .search-slide-leave-to {
+  transform: translateX(40px);
+}
+
+.ic-search {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  background: #47c9bc;
+  color: white;
+}
+
+.ic-search .search-unactive {
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: bold;
+}
+.ic-search .search-active {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: bold;
+}
+
+.ic-search .search-icon{
+  padding: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ic-search .search-cancel, .ic-search .search-search  {
+  width: 48px;
+  z-index: 2;
+  padding: 3px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ic-search .search-input {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.ic-search .search-input::-webkit-input-placeholder{ /* WebKit browsers */
+  font-size: 15px;
+  vertical-align: center;
+  color: rgba(255, 255, 255, .5);
+}
+.ic-search .search-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-size: 15px;
+  vertical-align: center;
+  color: rgba(255, 255, 255, .5);
+}
+.ic-search .search-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size: 15px;
+  vertical-align: center;
+  color: rgba(255, 255, 255, .5);
+}
+.ic-search .search-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size: 15px;
+  vertical-align: center;
+  color: rgba(255, 255, 255, .5);
+}
+.ic-search .search-input::-ms-clear { /* 清除ie自带删除按钮 */
+  display: none
+}
+.ic-search .search-input:valid + .search-icon-clear { /* 选择required验证通过后的clear元素。 */
+  display: inline
+}
+
+.ic-search .search-icon-clear {
+  display: none;
+  padding: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .8);
+}
