@@ -12,6 +12,7 @@ import Qrcode from './qrcode';
 import Radio from './radio';
 import Slider from './slider';
 import SwitchOption from './switch-option';
+import Textarea from './textarea';
 import Toast from './toast';
 
 const version = '0.0.1';
@@ -27,7 +28,8 @@ const components = [
   Qrcode,
   Radio,
   Slider,
-  SwitchOption
+  SwitchOption,
+  Textarea
 ];
 
 const install = function(Vue) {
@@ -60,6 +62,7 @@ export {
   Radio,
   Slider,
   SwitchOption,
+  Textarea,
   Toast
 };
 export default {

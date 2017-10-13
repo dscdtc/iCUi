@@ -60,6 +60,10 @@ module.exports = {
                 "title": "Popup 弹出层"
               },
               {
+                "path": "/textarea",
+                "title": "Textarea 输入"
+              },
+              {
                 "path": "/picker",
                 "title": "Picker 选择器"
               },

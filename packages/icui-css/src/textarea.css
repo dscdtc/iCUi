@@ -1,0 +1,43 @@
+/* textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+} */
+.ic-cell {
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    background: #fff;
+    font-size:17px;
+}
+.ic-cell__bd {
+    flex:1;
+}
+
+.ic-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: #000000;
+    font-size: 1em;
+    line-height: 1.6;
+    outline: 0;
+}
+
+    
+.ic-textarea-counter {
+    color: #B2B2B2;
+    text-align: right;
+}   

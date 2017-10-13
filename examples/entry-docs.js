@@ -14,4 +14,5 @@ export default {
   'navbar': r => require.ensure([], () => r(require('./docs/navbar.md')), 'navbar.md'),
   'icon': r => require.ensure([], () => r(require('./docs/icon.md')), 'icon.md'),
   'popup': r => require.ensure([], () => r(require('./docs/popup.md')), 'popup.md'),
+  'textarea': r => require.ensure([], () => r(require('./docs/textarea.md')), 'textarea.md'),
 };
