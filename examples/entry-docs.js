@@ -16,4 +16,6 @@ export default {
   'icon': r => require.ensure([], () => r(require('./docs/icon.md')), 'icon.md'),
   'popup': r => require.ensure([], () => r(require('./docs/popup.md')), 'popup.md'),
   'textarea': r => require.ensure([], () => r(require('./docs/textarea.md')), 'textarea.md'),
+  'group': r => require.ensure([], () => r(require('./docs/group.md')), 'group.md'),
+  'input': r => require.ensure([], () => r(require('./docs/input.md')), 'input.md'),
 };

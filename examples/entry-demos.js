@@ -15,4 +15,6 @@ export default {
   'icon': r => require.ensure([], () => r(require('./demos/icon.vue')), 'icon.vue'),
   'popup': r => require.ensure([], () => r(require('./demos/popup.vue')), 'popup.vue'),
   'textarea': r => require.ensure([], () => r(require('./demos/textarea.vue')), 'textarea.vue'),
+  'group': r => require.ensure([], () => r(require('./demos/group.vue')), 'group.vue'),
+  'input': r => require.ensure([], () => r(require('./demos/input.vue')), 'input.vue'),
 };

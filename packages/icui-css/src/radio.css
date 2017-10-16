@@ -16,12 +16,12 @@
     opacity: 0;
     margin: 0;
 }
-.ic-icon{
-    font-size: 22px;
-    line-height: 1;
+.ic-icon-check {
+    font-size:22px;
 }
 .ic-icon-checked {
     color: #47c9bc;
+    font-size:22px;
 }
 .ic-radio-label {
     line-height: 22px;

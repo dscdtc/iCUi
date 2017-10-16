@@ -64,8 +64,16 @@ module.exports = {
                 "title": "Popup 弹出层"
               },
               {
+                "path": "/input",
+                "title": "Input 输入"
+              },
+              {
                 "path": "/textarea",
                 "title": "Textarea 输入"
+              },
+              {
+                "path": "/group",
+                "title": "Group 组"
               },
               {
                 "path": "/picker",

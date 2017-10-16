@@ -3,7 +3,9 @@ import Button from './button';
 import Confirm from './confirm';
 import Flexbox from './flexbox';
 import FlexboxItem from './flexbox-item';
+import Group from './group';
 import Icon from './icon';
+import Input from './input';
 import Loading from './loading';
 import Navbar from './navbar';
 import Picker from './picker';
@@ -21,7 +23,9 @@ const components = [
   Button,
   Flexbox,
   FlexboxItem,
+  Group,
   Icon,
+  Input,
   Loading,
   Navbar,
   Picker,
@@ -55,7 +59,9 @@ export {
   Confirm,
   Flexbox,
   FlexboxItem,
+  Group,
   Icon,
+  Input,
   Loading,
   Navbar,
   Picker,

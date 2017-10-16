@@ -1,0 +1,36 @@
+.ic-cell {
+    padding: 10px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ic-label {
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.ic_cell_bd {
+    flex:1
+}
+.ic_input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.4em;
+    line-height: 1.4;
+}
+
+.ic-cell__ft {
+    text-align: right;
+    color:#999999;
+}
+
+.ic-icon-del {
+    font-size:14px;
+}
