@@ -69,7 +69,7 @@
 		},
 		autosize: Boolean
   	},
-	  mounted () {
+	mounted () {
 		this.$nextTick(() => {
 			if (this.autosize) {
 				this.bindAutosize()
@@ -82,7 +82,6 @@
 	watch: {
     // prop.autosize
 		autosize (val) {
-			console.log(val)
 			this.unbindAutosize()
 			if (val) {
 				this.bindAutosize()
@@ -123,10 +122,6 @@
 		},
   	},
 	methods: {
-		updateAutosize () {
-			Autosize.update(this.$refs.textarea)
-		},
-	// prop.autosize
 		bindAutosize () {
 			Autosize(this.$refs.textarea)
 		},
