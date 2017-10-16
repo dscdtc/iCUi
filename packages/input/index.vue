@@ -4,9 +4,13 @@
                  <label class="ic-label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
             </div>
             <div class="ic_cell_bd ic_cell_primary">
-               <input class="ic_input" 
-               :placeholder="placeholder"
-               v-model="currentValue"
+               <input class="ic_input"
+                  ref="input"
+                  v-if="type === 'text'"
+                  :maxlength="max"
+                  :placeholder="placeholder"
+                  type="text"
+                  v-model="currentValue"
                />
             </div>
             <div class="ic-cell__ft">
@@ -19,6 +23,7 @@
 </template>
 <script>
   import Icon from '../icon'
+  import { debounce } from '../utils'
   const COMPONENT_NAME = 'ic-input'
   export default {
     name :COMPONENT_NAME,
@@ -32,20 +37,38 @@
         type: String,
         default: ''
       },
+      // 节流
+      debounce: Number,
+      type: {
+        type: String,
+        default: 'text'
+      },
       showClear: {
         type: Boolean,
         default: true
       },
       placeholder: String,
+      max: Number
     },
-    watch:{
-
+    created() {
+      // 节流
+      if(this.debounce) {
+            this.$watch('currentValue', debounce((newQuery) => {
+            this.$emit('change', newQuery)
+          }, this.debounce))
+      }else {
+        this.$emit('change', this.currentValue)
+      }
+      
     },
     methods :{
       clear(){
         this.currentValue = ''
         this.focus()
-      }
+      },
+      focus () {
+        this.$refs.input.focus()
+      },
     },
     computed: {
       labelWidth() {
