@@ -1,26 +1,26 @@
 <template>
-    <form class="ic-search" action="#">
-      <div :class="{'search-unactive': !isFocus, 'search-active': isFocus}" @click="isFocus = true">
-        <ic-icon name="search" class="search-icon"></ic-icon>
-        <span v-show="!isFocus">{{mark}}</span>
-      </div>
-      <input
-        v-show="isFocus"
-        class="search-input"
-        v-model="searchValue"
-        :placeholder="this.placeholder"
-        :autofocus="autofocus"
-        @focus="isFocus = true"
-        required
-      />
-      <ic-icon name="del" class="search-icon search-icon-clear" @click="clear"></ic-icon>
-      <transition name="search-slide">
-        <span class="search-search" v-show="searchValue" @click="search">查询</span>
-      </transition>
-      <transition name="search-slide">
-        <span v-if="isFocus" v-show="!searchValue" @click="isFocus = false" class="search-cancel">取消</span>
-      </transition>
-    </form>
+    <div class="ic-search-bar">
+        <form class="ic-search__form" action=".">
+            <div class="ic-search-bar__box">
+                <ic-icon name="search" class="ic-icon-search"></ic-icon>
+                <input type="search" class="ic-search-bar__input" 
+                  v-model="currentValue"
+                  ref="input"
+                  @focus="onFocus"
+                  :placeholder="placeholder"
+                />
+                <ic-icon name="del" class="ic-icon-clear"
+                  v-show="currentValue"
+                  @click="clear" 
+                ></ic-icon>
+            </div>
+        </form>
+        <div class="ic-search-bar__cancel-btn"
+          v-show="isCancel"
+          @click="cancel">取消
+        </div>
+      
+    </div>
 </template>
 
 <script>
@@ -29,33 +29,43 @@
     name: COMPONENT_NAME,
     data() {
       return {
-        searchValue: '',
-        isFocus: false
+        currentValue: '',
+        isCancel: false,
+        isFocus: false,
       }
     },
     props: {
-      placeholder: {
+      value: {
         type: String,
-        default:'搜索'
+        default: ''
       },
-      placeholder: {
-        type: String,
-        default:'搜索'
-      },
-      mark: {
-        type: String,
-        default: '点击搜索'
-      },
+      placeholder: String,
     },
     methods: {
-      search () {
-        if (this.searchValue) {
-          this.$emit('search', this.searchValue)
-        }
+      clear() {
+        this.currentValue = ''
+        this.focus()
       },
-      clear () {
-        this.searchValue = ''
-      }
+      cancel () {
+        this.isCancel = false
+        this.currentValue = ''
+        this.$emit('on-cancel')
+      },
+      focus () {
+        this.$refs.input.focus()
+      },
+      onFocus () {
+        this.isCancel = true
+        this.isFocus = true
+        this.$emit('on-focus')
+      },
+      setFocus () {
+        this.$refs.input.focus()
+      },
+      setBlur () {
+        this.$refs.input.blur()
+        this.$emit('on-blur')
+      },
     }
   }
 </script>

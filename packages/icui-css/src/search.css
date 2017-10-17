@@ -1,91 +1,121 @@
-.search-slide-enter-active, .search-slide-leave-active {
-  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.search-slide-enter, .search-slide-leave-to {
-  transform: translateX(40px);
-}
 
-.ic-search {
+input[type='search'] {
+  font-family: inherit;
+  margin: 0;
+  -webkit-appearance:none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+      -moz-appearance: none;
+}
+.ic-search-bar {
+  position: relative;
+  padding: 8px 10px;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  background: #47c9bc;
-  color: white;
+  box-sizing: border-box;
+  background-color: #EFEFF4
 }
 
-.ic-search .search-unactive {
-  z-index: 1;
-  display: inline-block;
+.weui-search-bar:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #D7D6DC;
+  color: #D7D6DC;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.ic-search__form {
+  flex: auto;
+  background-color: #f5f5ff;
+  position: relative;
+}
+
+
+.ic-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100%;
   width: 100%;
-  text-align: center;
-  vertical-align: middle;
-  font-size: bold;
-}
-.ic-search .search-active {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  font-size: bold;
+  box-sizing: border-box;
+  z-index: 1;
+  background: #fff;
+  border-radius: 3px;
 }
 
-.ic-search .search-icon{
-  padding: 10px;
-  vertical-align: middle;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.ic-search .search-cancel, .ic-search .search-search  {
-  width: 48px;
-  z-index: 2;
-  padding: 3px;
-  vertical-align: middle;
-  font-weight: bold;
+.ic-icon-search , .ic-icon-clear{
+  color: #B2B2B2;
   font-size: 14px;
 }
 
-.ic-search .search-input {
-  height: 100%;
+.ic-search-bar__box .ic-icon-search {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  line-height: 28px;
+}
+
+.ic-search-bar__box .ic-search-bar__input {
+  padding: 4px 0;
   width: 100%;
-  flex-grow: 1;
-  background-color: transparent;
-  color: #fff;
-  font-size: 16px;
+  height: 20px;
+  border: 0;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: content-box;
+  background: transparent;
+}
+.ic-search-bar__label {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  z-index: 2;
+  border-radius: 3px;
+  color: #9B9B9B;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ic-search-bar__label .ic-icon-search {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.ic-search-bar__label span {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.ic-search-bar__box .ic-icon-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  line-height: 28px;
 }
 
-.ic-search .search-input::-webkit-input-placeholder{ /* WebKit browsers */
-  font-size: 15px;
-  vertical-align: center;
-  color: rgba(255, 255, 255, .5);
+.ic-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #108ee9;
+  white-space: nowrap;
 }
-.ic-search .search-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 15px;
-  vertical-align: center;
-  color: rgba(255, 255, 255, .5);
-}
-.ic-search .search-input::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 15px;
-  vertical-align: center;
-  color: rgba(255, 255, 255, .5);
-}
-.ic-search .search-input:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 15px;
-  vertical-align: center;
-  color: rgba(255, 255, 255, .5);
-}
-.ic-search .search-input::-ms-clear { /* 清除ie自带删除按钮 */
-  display: none
-}
-.ic-search .search-input:valid + .search-icon-clear { /* 选择required验证通过后的clear元素。 */
-  display: inline
-}
-
-.ic-search .search-icon-clear {
+/* .ic-search-bar.ic-search-bar_focusing .ic-search-bar__cancel-btn {
+  display: block;
+} */
+.ic-search-bar.ic-search-bar_focusing  .ic-search-bar__label{
   display: none;
-  padding: 6px;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, .8);
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
