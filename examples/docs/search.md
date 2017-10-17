@@ -1,4 +1,4 @@
-## SearchBar 搜索栏
+## Search 搜索栏
 
 ### 使用指南
 ``` javascript
@@ -13,28 +13,15 @@ Vue.component(Search.name, Search);
 
 :::demo
 ```html
-DEMO1:
-<ic-search
-    @search="searching"
-></ic-search>
 
-DEMO2:
 <ic-search
-    class="search"
-    mark="点击查询对象"
-    placeholder="老子要找！对！象！"
-    @search="searching"
-></ic-search>
+    ref="search"
+    @change="Onchange"
+    :debounce="200"
+    :placeholder="placeholder">
+</ic-search>
 
-<script>
-export default {
-	methods: {
-		searching (searchValue) {
-			alert('你搜索的内容为：' + searchValue)
-		}
-	}
-}
-</script>
+
 ```
 :::
 
@@ -42,6 +29,7 @@ export default {
 
 | 参数       | 说明      | 类型       | 默认值       |
 |-----------|-----------|-----------|-------------|
-| mark | 提示语 | `String` | ‘点击搜索’ |
-| placeholder | 返回 | `String` | ‘搜索’ |
 
+| placeholder | placeholder | `String`  | `''` | -  |
+| debounce | 节流时间 | `Number`  | `''` | - |
+| change | onChange派发时间 | `Function`  | `` | - |

@@ -25,6 +25,7 @@
 
 <script>
   const COMPONENT_NAME = 'ic-search'
+  import { debounce } from '../utils'
   export default {
     name: COMPONENT_NAME,
     data() {
@@ -40,6 +41,18 @@
         default: ''
       },
       placeholder: String,
+      debounce: Number,
+    },
+    created() {
+      // 节流
+      if(this.debounce) {
+            this.$watch('currentValue', debounce((newQuery) => {
+            this.$emit('change', newQuery)
+          }, this.debounce))
+      }else {
+        this.$emit('change', this.currentValue)
+      }
+      
     },
     methods: {
       clear() {

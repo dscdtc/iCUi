@@ -8,6 +8,8 @@
 
 		<ic-search
 			ref="search"
+			@change="Onchange"
+			:debounce="200"
 			:placeholder="placeholder">
 		</ic-search>
 
@@ -26,9 +28,11 @@ export default {
 		}
 	},
 	methods: {
-		setFocus(){
-			console.log(123)
+		setFocus() {
 			this.$refs.search.setFocus()
+		},
+		Onchange(val) {
+			console.log(val)
 		}
 	}
 }
