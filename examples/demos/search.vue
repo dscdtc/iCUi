@@ -32,7 +32,7 @@ export default {
 			this.$refs.search.setFocus()
 		},
 		Onchange(val) {
-			console.log(val)
+			// console.log(val)
 		}
 	}
 }

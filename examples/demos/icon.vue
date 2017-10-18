@@ -33,7 +33,5 @@
     
 </template>
 <style>
-    p{
-        margin-top:20px;
-    }
+   
 </style>

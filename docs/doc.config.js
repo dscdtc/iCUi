@@ -68,6 +68,10 @@ module.exports = {
                 "title": "Input 输入"
               },
               {
+                "path": "/countdown",
+                "title": "countDown 倒计时"
+              },
+              {
                 "path": "/textarea",
                 "title": "Textarea 输入"
               },
