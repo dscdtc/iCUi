@@ -11,7 +11,6 @@
   text-overflow: ellipsis;
   word-break: break-word;
   white-space: nowrap;
-  border-radius: 5px;
   background-color: #47c9bc;
   border: 1px solid #ddd
 }

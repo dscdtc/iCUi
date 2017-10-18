@@ -14,6 +14,7 @@ import Qrcode from './qrcode';
 import Radio from './radio';
 import Search from './search';
 import Slider from './slider';
+import Sliderbar from './sliderbar';
 import SwitchOption from './switch-option';
 import Textarea from './textarea';
 import Toast from './toast';
@@ -34,6 +35,7 @@ const components = [
   Radio,
   Search,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea
 ];
@@ -70,6 +72,7 @@ export {
   Radio,
   Search,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea,
   Toast

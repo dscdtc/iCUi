@@ -17,4 +17,5 @@ export default {
   'textarea': r => require.ensure([], () => r(require('./demos/textarea.vue')), 'textarea.vue'),
   'group': r => require.ensure([], () => r(require('./demos/group.vue')), 'group.vue'),
   'input': r => require.ensure([], () => r(require('./demos/input.vue')), 'input.vue'),
+  'sliderbar': r => require.ensure([], () => r(require('./demos/sliderbar.vue')), 'sliderbar.vue'),
 };
