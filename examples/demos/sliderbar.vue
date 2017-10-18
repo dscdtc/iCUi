@@ -5,7 +5,7 @@
 				<h1 class="title">Slide 滑动输入</h1>
 			</ic-flexbox-item>
 		</ic-flexbox>
-		<ic-slide></ic-slide>
+		<ic-sliderbar></ic-sliderbar>
 	</div> 
 </template>
 <script>

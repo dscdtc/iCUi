@@ -1,5 +1,4 @@
-## Input 输入
-
+## Sliderbar 滑动输入
 ### 使用指南
 ``` javascript
 import { Input } from 'icui';
