@@ -29,8 +29,14 @@
     },
     created() {
       this.touch = {}
+      this.$nextTick(() => {
+         this.initProgress()
+      })
     },
     methods: {
+      initProgress() {
+          this._offset(this.percent)
+      },
       progressTouchStart(e) {
         this.touch.initiated = true
         this.touch.startX = e.touches[0].pageX
