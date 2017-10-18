@@ -18,4 +18,5 @@ export default {
   'textarea': r => require.ensure([], () => r(require('./docs/textarea.md')), 'textarea.md'),
   'group': r => require.ensure([], () => r(require('./docs/group.md')), 'group.md'),
   'input': r => require.ensure([], () => r(require('./docs/input.md')), 'input.md'),
+  'countdown': r => require.ensure([], () => r(require('./docs/countdown.md')), 'countdown.md'),
 };
