@@ -8,7 +8,7 @@
     export default {
         data() {
             return {
-                percent:0.08
+                percent:35
             }
         },
         methods: {
