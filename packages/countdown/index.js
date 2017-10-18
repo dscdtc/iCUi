@@ -7,64 +7,31 @@ export default {
   name: COMPONENT_NAME,
   data() {
     return {
-      /**
-       * Total number of time (in milliseconds) for the countdown.
-       * @type {number}
-       */
       count: 0,
-
-      /**
-       * Define if the time is countdowning.
-       * @type {boolean}
-       */
       counting: false,
-
-      /**
-       * The absolute end time.
-       * @type {number}
-       */
       endTime: Date.now(),
     };
   },
 
   props: {
-    /**
-     * Start to countdown automatically when initialized.
-     */
     autoStart: {
       type: Boolean,
       default: true,
     },
-
-    /**
-     * Update interval time (in milliseconds) of the countdown.
-     */
     interval: {
       type: Number,
       default: 1000,
     },
-
-    /**
-     * Add a leading zero to the output numbers if they are less than 10.
-     */
     leadingZero: {
       type: Boolean,
       default: true,
     },
-
-    /**
-     * Total number of time (in milliseconds) for the countdown.
-     */
     time: {
       type: Number,
       default: 0,
       required: true,
       validator: value => value >= 0,
     },
-
-    /**
-     * The tag of the component root element in the countdown.
-     */
     tag: {
       type: String,
       default: 'span',
@@ -72,34 +39,15 @@ export default {
   },
 
   computed: {
-    /**
-     * Remaining days.
-     * @returns {number}
-     */
     days() {
       return Math.floor(this.count / MILLISECONDS_DAY);
     },
-
-    /**
-     * Remaining hours.
-     * @returns {number}
-     */
     hours() {
       return Math.floor((this.count % MILLISECONDS_DAY) / MILLISECONDS_HOUR);
     },
-
-    /**
-     * Remaining minutes.
-     * @returns {number}
-     */
     minutes() {
       return Math.floor((this.count % MILLISECONDS_HOUR) / MILLISECONDS_MINUTE);
     },
-
-    /**
-     * Remaining seconds.
-     * @returns {number}
-     */
     seconds() {
       const { interval } = this;
       const seconds = (this.count % MILLISECONDS_MINUTE) / MILLISECONDS_SECOND;
@@ -114,35 +62,15 @@ export default {
 
       return Math.floor(seconds);
     },
-
-    /**
-     * Total remaining days.
-     * @returns {number}
-     */
     totalDays() {
       return this.days;
     },
-
-    /**
-     * Total remaining hours.
-     * @returns {number}
-     */
     totalHours() {
       return Math.floor(this.count / MILLISECONDS_HOUR);
     },
-
-    /**
-     * Total remaining minutes.
-     * @returns {number}
-     */
     totalMinutes() {
       return Math.floor(this.count / MILLISECONDS_MINUTE);
     },
-
-    /**
-     * Total remaining seconds.
-     * @returns {number}
-     */
     totalSeconds() {
       return Math.floor(this.count / MILLISECONDS_SECOND);
     },
@@ -189,9 +117,6 @@ export default {
   },
 
   methods: {
-    /**
-     * Initialize count.
-     */
     init() {
       const { time } = this;
 
@@ -200,40 +125,18 @@ export default {
         this.endTime = Date.now() + time;
       }
     },
-
-    /**
-     * Start to countdown.
-     * @public
-     * @emits Countdown#countdownstart
-     */
     start() {
       if (this.counting) {
         return;
       }
-
-      /**
-       * Countdown start event.
-       * @event Countdown#countdownstart
-       */
       this.$emit('countdownstart');
       this.counting = true;
       this.step();
     },
-
-    /**
-     * Step to countdown.
-     * @private
-     * @emits Countdown#countdownprogress
-     */
     step() {
       if (!this.counting) {
         return;
       }
-
-      /**
-       * Countdown progress event.
-       * @event Countdown#countdownprogress
-       */
       this.$emit('countdownprogress', {
         days: this.days,
         hours: this.hours,
@@ -253,27 +156,11 @@ export default {
         this.stop();
       }
     },
-
-    /**
-     * Stop the countdown.
-     * @public
-     * @emits Countdown#countdownend
-     */
     stop() {
       this.counting = false;
       this.timeout = undefined;
-
-      /**
-       * Countdown end event.
-       * @event Countdown#countdownend
-       */
       this.$emit('countdownend');
     },
-
-    /**
-     * Update the count.
-     * @private
-     */
     update() {
       this.count = Math.max(0, this.endTime - Date.now());
     },
