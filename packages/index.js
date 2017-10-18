@@ -16,6 +16,7 @@ import Radio from './radio';
 import Search from './search';
 import Slide from './slide';
 import Slider from './slider';
+import Sliderbar from './sliderbar';
 import SwitchOption from './switch-option';
 import Textarea from './textarea';
 import Toast from './toast';
@@ -38,6 +39,7 @@ const components = [
   Search,
   Slide,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea
 ];
@@ -76,6 +78,7 @@ export {
   Search,
   Slide,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea,
   Toast
