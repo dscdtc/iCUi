@@ -64,8 +64,8 @@ module.exports = {
                 "title": "Popup 弹出层"
               },
               {
-                "path": "/progress-bar",
-                "title": "Progress 进度条"
+                "path": "/slide",
+                "title": "Slide 滑动输入条"
               },
               {
                 "path": "/input",

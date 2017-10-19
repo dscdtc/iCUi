@@ -1,13 +1,13 @@
 <template>
   <div class="progress-bar" ref="progressBar" @click="progressClick">
-    <div class="bar-inner">
-      <div class="progress" ref="progress"></div>
+    <div class="bar-inner" :style="railStyle">
+      <div class="progress" ref="progress" :style="trackStyle"></div>
       <div class="progress-btn-wrapper" ref="progressBtn"
            @touchstart.prevent="progressTouchStart"
            @touchmove.prevent="progressTouchMove"
            @touchend="progressTouchEnd"
       >
-        <div class="progress-btn"></div>
+        <div class="progress-btn" :style="handleStyle"></div>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
   import {prefixStyle} from '../utils/dom'
   const transform = prefixStyle('transform')
   console.log(transform)
-  const COMPONENT_NAME = 'ic-progress-bar'
+  const COMPONENT_NAME = 'ic-slide'
   const progressBtnWidth = 16
   
   export default {
@@ -26,6 +26,30 @@
       percent: {
         type: Number,
         default: 0
+      },
+      trackStyle: {
+        type: Object,
+        default:function(){
+          return {
+            background:'#47c9bc'
+          }
+        }
+      },
+      handleStyle: {
+        type: Object,
+        default: function(){
+          return {
+             background:'#47c9bc'
+          }
+        }
+      },
+      railStyle: {
+        type: Object,
+        default: function(){
+          return {
+             background:'rgba(0,0,0,.3)'
+          }
+        }
       }
     },
     created() {
