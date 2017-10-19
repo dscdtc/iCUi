@@ -1,0 +1,13 @@
+.ic-bubble-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0,0,0,.7)
+}
+
+.ic-bubble-content {
+  z-index: 1999;
+  background-color: #fff
+}

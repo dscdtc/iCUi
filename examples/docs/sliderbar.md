@@ -13,14 +13,6 @@ Vue.component(Input.name, Input);
 
 :::demo 基础用法
 ```html
- <ic-input
-    title="节流"
-    placeholder="I'm placeholder"
-    :debounce="200"
-    :type="'text'"
-    @change="change"
->
-</ic-input>
 ```
 
 

@@ -22,9 +22,7 @@
       value: {
         type: String,
         default: ''
-      },
-      placeholder: String,
-      debounce: Number,
+      }
     }
   }
 </script>
