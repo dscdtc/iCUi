@@ -5,7 +5,8 @@
 				<h1 class="title">气泡</h1>
 			</ic-flexbox-item>
 		</ic-flexbox>
-		<ic-bubble>
+		<ic-button @click="display=!display" ripple>点击显示</ic-button>
+		<ic-bubble v-show="display" pos='top:64px;right:16px'>
 			<li>1111111111</li>
 			<li>2222222222</li>
 			<li>3333333333</li>
@@ -21,3 +22,13 @@
     font-size: 20px;
   }
 </style>
+
+<script>
+export default {
+	data(){
+		return {
+			display: false
+		}
+	}
+}
+</script>

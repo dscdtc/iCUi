@@ -17,8 +17,7 @@ export default {
   'textarea': r => require.ensure([], () => r(require('./demos/textarea.vue')), 'textarea.vue'),
   'group': r => require.ensure([], () => r(require('./demos/group.vue')), 'group.vue'),
   'input': r => require.ensure([], () => r(require('./demos/input.vue')), 'input.vue'),
-  'sliderbar': r => require.ensure([], () => r(require('./demos/sliderbar.vue')), 'sliderbar.vue'),
   'bubble': r => require.ensure([], () => r(require('./demos/bubble.vue')), 'bubble.vue'),
   'countdown': r => require.ensure([], () => r(require('./demos/countdown.vue')), 'countdown.vue'),
-  'slide': r => require.ensure([], () => r(require('./demos/slide.vue')), 'slide.vue'),
+  'progress-bar': r => require.ensure([], () => r(require('./demos/progress-bar.vue')), 'progress-bar.vue'),
 };

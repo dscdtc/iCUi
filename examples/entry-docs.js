@@ -17,9 +17,8 @@ export default {
   'popup': r => require.ensure([], () => r(require('./docs/popup.md')), 'popup.md'),
   'textarea': r => require.ensure([], () => r(require('./docs/textarea.md')), 'textarea.md'),
   'group': r => require.ensure([], () => r(require('./docs/group.md')), 'group.md'),
-  'sliderbar': r => require.ensure([], () => r(require('./docs/sliderbar.md')), 'sliderbar.md'),
   'bubble': r => require.ensure([], () => r(require('./docs/bubble.md')), 'bubble.md'),
   'input': r => require.ensure([], () => r(require('./docs/input.md')), 'input.md'),
   'countdown': r => require.ensure([], () => r(require('./docs/countdown.md')), 'countdown.md'),
-  'slide': r => require.ensure([], () => r(require('./docs/slide.md')), 'slide.md'),
+  'progress-bar': r => require.ensure([], () => r(require('./docs/progress-bar.md')), 'progress-bar.md'),
 };
