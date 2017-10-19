@@ -12,6 +12,7 @@ import Loading from './loading';
 import Navbar from './navbar';
 import Picker from './picker';
 import Popup from './popup';
+import ProgressBar from './progress-bar';
 import Qrcode from './qrcode';
 import Radio from './radio';
 import Search from './search';
@@ -35,6 +36,7 @@ const components = [
   Navbar,
   Picker,
   Popup,
+  ProgressBar,
   Qrcode,
   Radio,
   Search,
@@ -74,6 +76,7 @@ export {
   Navbar,
   Picker,
   Popup,
+  ProgressBar,
   Qrcode,
   Radio,
   Search,
