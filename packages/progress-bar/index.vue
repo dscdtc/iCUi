@@ -35,7 +35,8 @@
     },
     methods: {
       initProgress() {
-          this._offset(this.percent)
+          const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth
+          this._offset(this.percent * barWidth)
       },
       progressTouchStart(e) {
         this.touch.initiated = true
@@ -49,6 +50,7 @@
         const deltaX = e.touches[0].pageX - this.touch.startX
         const offsetWidth = Math.min(this.$refs.progressBar.clientWidth - progressBtnWidth, Math.max(0, this.touch.left + deltaX))
         this._offset(offsetWidth)
+        this.$emit('percentChanging',offsetWidth)
       },
       progressTouchEnd() {
         this.touch.initiated = false

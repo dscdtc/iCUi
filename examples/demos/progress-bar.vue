@@ -1,6 +1,7 @@
 <template>
 <div>
-    <ic-progress-bar :percent="percent" @percentChange="onProgressBarChange"></ic-progress-bar>
+    <ic-progress-bar :percent="percent"
+     ></ic-progress-bar>
 </div>
 </template>
 
@@ -8,13 +9,15 @@
     export default {
         data() {
             return {
-                percent:35
+                percent:0.5
             }
         },
         methods: {
-            onProgressBarChange() {
-
-            }
+           
         }
     }
 </script>
+
+<style>
+    
+</style>
