@@ -16,6 +16,7 @@
 <script>
   import {prefixStyle} from '../utils/dom'
   const transform = prefixStyle('transform')
+  console.log(transform)
   const COMPONENT_NAME = 'ic-progress-bar'
   const progressBtnWidth = 16
   
@@ -47,18 +48,21 @@
         if (!this.touch.initiated) {
           return
         }
+        const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth
         const deltaX = e.touches[0].pageX - this.touch.startX
-        const offsetWidth = Math.min(this.$refs.progressBar.clientWidth - progressBtnWidth, Math.max(0, this.touch.left + deltaX))
+        const offsetWidth = Math.min(barWidth, Math.max(0, this.touch.left + deltaX))
         this._offset(offsetWidth)
-        this.$emit('percentChanging',offsetWidth)
+        this.$emit('percentMove',offsetWidth / barWidth)
       },
       progressTouchEnd() {
         this.touch.initiated = false
         this._triggerPercent()
       },
       progressClick(e) {
+        const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth
         const rect = this.$refs.progressBar.getBoundingClientRect()
-        const offsetWidth = e.pageX - rect.left
+        // console.log(e.pageX)
+        const offsetWidth = Math.min(barWidth, e.pageX - rect.left)
         this._offset(offsetWidth)
         // 点击progressBtn 的时候，e.offsetX 获取不对
         // this._offset(e.offsetX)
@@ -68,11 +72,12 @@
         const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth
         const percent = this.$refs.progress.clientWidth / barWidth
         // console.log(percent)
-        this.$emit('percentChange', percent)
+        this.$emit('percentEnd', percent)
       },
       _offset(offsetWidth) {
+        // console.log(this.$refs.progressBtn.style)
         this.$refs.progress.style.width = `${offsetWidth}px`
-        this.$refs.progressBtn.style[transform] = `translate3d(${offsetWidth}px,0,0)`
+        this.$refs.progressBtn.style.transform = `translate3d(${offsetWidth}px,0,0)`
       }
     },
     watch: {
