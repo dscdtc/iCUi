@@ -12,10 +12,10 @@ import Loading from './loading';
 import Navbar from './navbar';
 import Picker from './picker';
 import Popup from './popup';
-import ProgressBar from './progress-bar';
 import Qrcode from './qrcode';
 import Radio from './radio';
 import Search from './search';
+import Slide from './slide';
 import Slider from './slider';
 import Sliderbar from './sliderbar';
 import SwitchOption from './switch-option';
@@ -36,10 +36,10 @@ const components = [
   Navbar,
   Picker,
   Popup,
-  ProgressBar,
   Qrcode,
   Radio,
   Search,
+  Slide,
   Slider,
   Sliderbar,
   SwitchOption,
@@ -76,10 +76,10 @@ export {
   Navbar,
   Picker,
   Popup,
-  ProgressBar,
   Qrcode,
   Radio,
   Search,
+  Slide,
   Slider,
   Sliderbar,
   SwitchOption,
