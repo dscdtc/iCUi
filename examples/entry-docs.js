@@ -22,4 +22,5 @@ export default {
   'countdown': r => require.ensure([], () => r(require('./docs/countdown.md')), 'countdown.md'),
   'slide': r => require.ensure([], () => r(require('./docs/slide.md')), 'slide.md'),
   'progress-bar': r => require.ensure([], () => r(require('./docs/progress-bar.md')), 'progress-bar.md'),
+  'sliderbar': r => require.ensure([], () => r(require('./docs/sliderbar.md')), 'sliderbar.md'),
 };
