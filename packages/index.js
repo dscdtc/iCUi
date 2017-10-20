@@ -1,4 +1,5 @@
 import Alert from './alert';
+import Bubble from './bubble';
 import Button from './button';
 import Confirm from './confirm';
 import Countdown from './countdown';
@@ -22,6 +23,7 @@ import Toast from './toast';
 
 const version = '0.0.1';
 const components = [
+  Bubble,
   Button,
   Countdown,
   Flexbox,
@@ -59,6 +61,7 @@ export {
   install,
   version,
   Alert,
+  Bubble,
   Button,
   Confirm,
   Countdown,
