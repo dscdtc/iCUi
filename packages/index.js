@@ -1,4 +1,5 @@
 import Alert from './alert';
+import Bubble from './bubble';
 import Button from './button';
 import Confirm from './confirm';
 import Countdown from './countdown';
@@ -16,12 +17,14 @@ import Radio from './radio';
 import Search from './search';
 import Slide from './slide';
 import Slider from './slider';
+import Sliderbar from './sliderbar';
 import SwitchOption from './switch-option';
 import Textarea from './textarea';
 import Toast from './toast';
 
 const version = '0.0.1';
 const components = [
+  Bubble,
   Button,
   Countdown,
   Flexbox,
@@ -38,6 +41,7 @@ const components = [
   Search,
   Slide,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea
 ];
@@ -59,6 +63,7 @@ export {
   install,
   version,
   Alert,
+  Bubble,
   Button,
   Confirm,
   Countdown,
@@ -76,6 +81,7 @@ export {
   Search,
   Slide,
   Slider,
+  Sliderbar,
   SwitchOption,
   Textarea,
   Toast

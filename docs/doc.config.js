@@ -56,6 +56,10 @@ module.exports = {
                 "title": "Loading 加载"
               },
               {
+                "path": "/bubble",
+                "title": "Bubble 气泡"
+              },
+              {
                 "path": "/slider",
                 "title": "Slider 轮播"
               },
