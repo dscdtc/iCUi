@@ -13,7 +13,7 @@ Vue.component(Button.name, Button);
 <ic-button>Primary Button</ic-button>
 <ic-button loading>Loading</ic-button>
 <ic-button disabled>Disabled</ic-button>
-<ic-button inline ripple>has ripple</ic-button>
+<ic-button inline :ripple="false">Inline Button</ic-button>
 <ic-button inline>Inline Button</ic-button>
 ```
 :::
@@ -25,4 +25,4 @@ Vue.component(Button.name, Button);
 | loading | 加载中的按钮 | `Boolean` | false |
 | disable | 不可用的按钮 | `Boolean` | false |
 | inline | 行内的按钮 | `Boolean` | false |
-| ripple | 显示波纹效果 | `Boolean` | false |
+| ripple | 显示波纹效果 | `Boolean` | true |
