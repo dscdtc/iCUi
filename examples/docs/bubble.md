@@ -17,9 +17,9 @@ Vue.component(Bubble.name, Bubble);
 ```html
 点击显示底部气泡：
 <ic-button @click="show1" ripple>点击显示底部气泡</ic-button>
-<ic-bubble pos='top:171px;right:61px' ref="bubble1">
-    <li>1111111111</li>
-    <li>2222222222</li>
+<ic-bubble pos='top:60px;right:10px' ref="bubble1">
+    <li><ic-icon name="search" style="margin-right:10px"></ic-icon>阿斯蒂芬阿斯</li>
+    <li @click="test">2222222222</li>
     <li>3333333333</li>
     <li>4444444444</li>
 </ic-bubble>

@@ -1,7 +1,7 @@
 <template>
-  <div class="ic-bubble" @click="clickOn">
+  <div class="ic-bubble" @click="show">
     <transition name="bubblefade">
-      <div class="ic-bubble-mask" v-show="display" @click="show"></div>
+      <div class="ic-bubble-mask" v-show="display" ></div>
     </transition>
     <transition name="bubblescale">
     <div
@@ -31,7 +31,7 @@
     props: {
       pos: {
         type: String,
-        default: ""
+        default: "top:0;right:0;"
       },
       up: {
         type: Boolean,
@@ -39,11 +39,6 @@
       }
     },
     methods: {
-      clickOn () {
-        if (!this.loading && !this.disabled) {
-          this.$emit('click')
-        }
-      },
       show () {
         this.display = !this.display
       }
