@@ -1,11 +1,16 @@
 <template>
-  <div class="ic-bubble">
-    <transition name="fade">
-    <div @click="display=!display" v-show="display" class="ic-bubble-mask"></div>
+  <div class="ic-bubble" @click="clickOn">
+    <transition name="bubblefade">
+      <div class="ic-bubble-mask" v-show="display" @click="show"></div>
     </transition>
-    <transition name="scale">
-    <div class="ic-bubble-content" :style="pos">
-      <div class="ic-bubble-arrow"></div>
+    <transition name="bubblescale">
+    <div
+    :class="{'ic-bubble-content':!up, 'ic-bubble-content-down': up}"
+    :style="pos"
+    v-show="display"
+    >
+    <!--Can't write this way: :class="['ic-bubble-content', {'ic-bubble-content-down': up}]"> -->
+      <div :class="['ic-bubble-arrow', {'ic-bubble-arrow-down': up}]"></div>
       <ul class="ic-bubble-list">
         <slot></slot>
       </ul>
@@ -18,14 +23,29 @@
   const COMPONENT_NAME = 'ic-bubble'
   export default {
     name: COMPONENT_NAME,
+    data () {
+      return {
+        display: false
+      }
+    },
     props: {
       pos: {
         type: String,
         default: ""
       },
-      colmn: {
+      up: {
         type: Boolean,
         default: false
+      }
+    },
+    methods: {
+      clickOn () {
+        if (!this.loading && !this.disabled) {
+          this.$emit('click')
+        }
+      },
+      show () {
+        this.display = !this.display
       }
     }
   }

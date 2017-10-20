@@ -5,15 +5,28 @@
 				<h1 class="title">气泡</h1>
 			</ic-flexbox-item>
 		</ic-flexbox>
-		<ic-button @click="display=!display" ripple>点击显示</ic-button>
-		<ic-bubble v-show="display" pos='top:64px;right:16px'>
-			<li>1111111111</li>
-			<li>2222222222</li>
-			<li>3333333333</li>
-			<li>4444444444</li>
-			<li>5555555555</li>
-			<li>6666666666</li>
-		</ic-bubble>
+		<ic-flexbox row=64 vertical>
+			<h2>底部气泡</h2>
+			<ic-flexbox-item>
+				<ic-button @click="show1" ripple>点击显示底部气泡</ic-button>
+				<ic-bubble pos='top:171px;right:61px' ref="bubble1">
+					<li>1111111111</li>
+					<li>2222222222</li>
+					<li>3333333333</li>
+					<li>4444444444</li>
+				</ic-bubble>
+			</ic-flexbox-item>
+			<h2>顶部气泡</h2>
+			<ic-flexbox-item>
+				<ic-button @click="show2" ripple>点击显示顶部气泡</ic-button>
+				<ic-bubble pos='bottom:171px;left:71px' ref="bubble2" up>
+					<li>1111111111</li>
+					<li>2222222222</li>
+					<li>3333333333</li>
+					<li>4444444444</li>
+				</ic-bubble>
+			</ic-flexbox-item>
+		</ic-flexbox>
 	</div>
 </template>
 
@@ -25,9 +38,12 @@
 
 <script>
 export default {
-	data(){
-		return {
-			display: false
+	methods: {
+		show1 () {
+			this.$refs.bubble1.show()
+		},
+		show2 () {
+			this.$refs.bubble2.show()
 		}
 	}
 }

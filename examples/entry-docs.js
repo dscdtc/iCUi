@@ -20,5 +20,6 @@ export default {
   'bubble': r => require.ensure([], () => r(require('./docs/bubble.md')), 'bubble.md'),
   'input': r => require.ensure([], () => r(require('./docs/input.md')), 'input.md'),
   'countdown': r => require.ensure([], () => r(require('./docs/countdown.md')), 'countdown.md'),
+  'slide': r => require.ensure([], () => r(require('./docs/slide.md')), 'slide.md'),
   'progress-bar': r => require.ensure([], () => r(require('./docs/progress-bar.md')), 'progress-bar.md'),
 };
