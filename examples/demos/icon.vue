@@ -2,8 +2,8 @@
     <div>
         <ic-flexbox row="50" col="10">
             <ic-flexbox-item vertical>
-                <ic-icon name="serach"></ic-icon>
-                <p>serach</p>
+                <ic-icon name="search"></ic-icon>
+                <p>search</p>
             </ic-flexbox-item>
             <ic-flexbox-item vertical>
                 <ic-icon name="del"></ic-icon>
