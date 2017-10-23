@@ -1,5 +1,13 @@
 <template>
 <div>
+    <ic-flexbox vertical>
+        <ic-flexbox-item>
+            <h1 class="title">Slide滑动输入条</h1>
+        </ic-flexbox-item>
+        <ic-flexbox-item>
+            该例请在手机模式下查看
+        </ic-flexbox-item>
+    </ic-flexbox>
     <ic-slide :percent="percent1"
         @percentMove="onPercentMove1"
         @percentEnd="onPercentEnd1"
